@@ -1,0 +1,7 @@
+{
+    "token": "your bot token",
+    "id": your channel id,
+    "current_version": "version of the current roblox version if its not same with https://setup.rbxcdn.com/version it will notify also you can get your version with this website too: https://setup.rbxcdn.com/version",
+    "status": "dnd",
+    "activity": "Valyne || qqual#9999"
+}
