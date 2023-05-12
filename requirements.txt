@@ -1,0 +1,4 @@
+rgbprint
+asyncio
+discord
+requests
