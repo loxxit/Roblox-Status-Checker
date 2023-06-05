@@ -5,4 +5,4 @@ First, open the **config.json** and edit the token, id. **Id is channel id** **t
 
 ### Any Errors?
 
-*Come Join us!* **https://discord.gg/valyne**
+*Come Join us!* **[https://discord.gg/valyne](https://discord.gg/F2GnrCCADJ)**
