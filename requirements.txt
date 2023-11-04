@@ -1,4 +1,2 @@
-rgbprint
-asyncio
 discord
 requests
