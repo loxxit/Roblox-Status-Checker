@@ -4,6 +4,7 @@ try:
     import time
     import json
     import requests
+    import logging
     from discord.ext import tasks, commands
     ROBLOX_CLIENT_VERSION_API = "https://setup.rbxcdn.com/version"
     try:
@@ -14,7 +15,10 @@ try:
             raise ValueError("Bot token is not found in config.json")
     except FileNotFoundError:
         raise FileNotFoundError("config.json file not found")
-
+    logging.basicConfig(level=logging.INFO)
+    logging.getLogger('discord.client').setLevel(logging.WARNING)
+    logging.getLogger('discord.gateway').setLevel(logging.WARNING)
+    os.system("color c")
     secs = 5
     with open('config.json', 'r') as config_file:
             config = json.load(config_file)
@@ -46,11 +50,13 @@ try:
         if not bot_message_exists:
             await channel.send("No bot message found. Sending a new message.")
             update_message.start()
+            os.system("cls")
 
         await bot.change_presence(activity=activity, status=discord.Status.do_not_disturb)
 
         if bot_message_exists:
             update_message.start()
+            os.system("cls")
     @tasks.loop(seconds=secs)
     async def update_message():
         channel = bot.get_channel(channel_id)
